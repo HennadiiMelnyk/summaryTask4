@@ -1,0 +1,25 @@
+<%@ taglib prefix="login" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="adminPanel" tagdir="/WEB-INF/tags" %>
+<%@ include file="/WEB-INF/jspf/head.jspf" %>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="text-align: center;">
+            <ul class="navbar-nav" style="justify-content: center;float: none;">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <login:login/>
+                </li>
+                <li class="nav-item">
+                    <adminPanel:adminPanel />
+                </li>
+            </ul>
+        </div>
+        <a href="/controller?command=showCart"> <img src="img/cart.png">Cart</a>
+    </nav>
+</header>
